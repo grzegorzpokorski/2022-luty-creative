@@ -11495,11 +11495,27 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
   list-style: none; }
 
-.cards__item {
-  border-bottom: 0.1875rem solid #78bd26; }
-
-.cards__icon {
-  font-size: 3rem; }
+.cards {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  row-gap: 1.5rem; }
+  .cards__item {
+    border-bottom: 0.1875rem solid #78bd26;
+    z-index: 1; }
+  .cards__icon {
+    font-size: 3rem; }
+  .cards__marker {
+    position: relative; }
+    .cards__marker:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -2.75rem;
+      width: .75rem;
+      height: 1.5rem;
+      background-color: #78bd26;
+      z-index: 0; }
 
 .archive-header {
   background-position: center;
@@ -11539,28 +11555,26 @@ readers do not read off random characters that represent icons */
   margin-bottom: 0;
   row-gap: 1.5rem; }
 
-.feature {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-  .feature__icon-wrapper {
-    position: relative;
-    min-width: 8rem;
-    background-color: #78bd26; }
-    .feature__icon-wrapper:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%; }
-  .feature:hover .feature__icon {
-    font-size: 3rem; }
-  .feature__icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem;
-    color: #ffffff;
-    transition: all .35s; }
+.feature__icon-wrapper {
+  position: relative;
+  min-width: 8rem;
+  background-color: #78bd26; }
+  .feature__icon-wrapper:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%; }
+
+.feature:hover .feature__icon {
+  font-size: 3rem; }
+
+.feature__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: #ffffff;
+  transition: all .35s; }
 
 p:last-child {
   margin-bottom: 0; }
