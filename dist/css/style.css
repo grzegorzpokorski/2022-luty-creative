@@ -11438,31 +11438,33 @@ readers do not read off random characters that represent icons */
   position: relative;
   margin-bottom: 0;
   overflow: hidden; }
-  .promo__figure:before {
+  .promo__figure:before, .promo__figure:after {
     content: '';
     position: absolute;
+    background-color: #78bd26;
+    transition: all .35s; }
+  .promo__figure:before {
     top: .75rem;
     left: .75rem;
     width: 3rem;
     height: 3rem;
-    background-color: #78bd26;
-    z-index: 0;
-    transition: all .35s; }
+    z-index: 0; }
   .promo__figure:after {
-    content: '';
-    position: absolute;
     bottom: 0rem;
     right: .75rem;
     width: 9.125rem;
     height: 9.125rem;
-    background-color: #78bd26;
-    z-index: 0;
-    transition: all .35s; }
+    z-index: 0; }
   .promo__figure:hover:after {
     margin-right: .375rem;
     margin-bottom: .375rem; }
   .promo__figure:hover:before {
     margin-left: .375rem; }
+  .promo__figure--related:hover:after {
+    margin-right: .375rem;
+    margin-bottom: .375rem; }
+  .promo__figure--related:hover:before {
+    margin-left: .1875rem; }
 
 .promo__image {
   position: relative;
@@ -11475,6 +11477,14 @@ readers do not read off random characters that represent icons */
   margin-bottom: 1.5rem;
   margin-left: .75rem;
   z-index: 1; }
+  .promo__image--single {
+    height: 31.25rem; }
+  .promo__image--related {
+    width: calc(100% - 1.125rem);
+    height: 13.5rem;
+    margin-right: 1.125rem;
+    margin-bottom: .75rem;
+    margin-left: .375rem; }
 
 .banner--image {
   background-position: center;
@@ -11628,6 +11638,11 @@ readers do not read off random characters that represent icons */
     margin-top: 2rem; }
     .custom-content h5:first-child, .custom-content .h5:first-child {
       margin-top: 0; }
+  .custom-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem; }
 
 p:last-child {
   margin-bottom: 0; }
