@@ -1,0 +1,9 @@
+.cards{
+	&__item{
+		border-bottom: 0.1875rem solid $green;
+	}
+
+	&__icon{
+		font-size: $font-size-base * 3;
+	}
+}
