@@ -11692,6 +11692,44 @@ readers do not read off random characters that represent icons */
     .process__item:nth-child(even) .process__header {
       justify-content: end; } }
 
+.hero--image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative; }
+  .hero--image:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(120, 189, 38, 0.95);
+    z-index: 1; }
+
+.hero__content {
+  z-index: 2; }
+
+p:last-child {
+  margin-bottom: 0; }
+
+.list-unstyled {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0; }
+
+.z-index-2 {
+  z-index: 2; }
+
+.z-index-1 {
+  z-index: 1; }
+
+.z-index-2 {
+  z-index: 2; }
+
+.z-index-3 {
+  z-index: 3; }
+
+.z-index-4 {
+  z-index: 4; }
+
 p:last-child {
   margin-bottom: 0; }
 
